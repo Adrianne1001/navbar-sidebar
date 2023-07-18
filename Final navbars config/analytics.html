@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="shared/styles.css">
+	<link rel="stylesheet" href="analytics.css">
+	
+
+	<title>SuperAdmin</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		
+		<div class="head">
+				<div class="logo"><img src="img/logo.png" alt="" href="dashboard.html">
+				</div>
+				<div class="details">
+					<p class="office">NMIS</p>
+					<p class="region">RTOC XI</p>
+				</div>
+		</div>
+		
+		<ul class="side-menu top">
+			<p class="title">Main</p>
+			<li>
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-current-location'></i>
+					<span class="text">GeoLocation</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-user-account'></i>
+					<span class="text">Register Admin Accounts</span>
+				</a>
+				<!-- <ul class="sub-menu">
+					<li>
+						<a href="#">
+							<span class="text">Meat Inspection Admin</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="text">MTV Inspection Admin</span>
+						</a>
+					</li>
+				</ul> -->
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-report'></i>
+					<span class="text">Meat Inspection Reports</span>
+					<i class="bx bxs-chevron-down dropdown-icon"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-report'></i>
+					<span class="text">MTV Registration Reports</span>
+					<i class="bx bxs-chevron-down dropdown-icon"></i>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu bot">
+			<p class="title">Others</p>
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout" data-toggle="modal" data-target="#logoutModal">
+				  <i class='bx bxs-log-out-circle' ></i>
+				  <span class="text">Logout</span>
+				</a>
+			  </li>			  
+		</ul>
+
+		<!-- Logout Modal -->
+		<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+				Do you really want to log out?
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-danger">Logout</button>
+				</div>
+			</div>
+			</div>
+		</div>
+  
+	</section>
+	<!-- SIDEBAR -->
+
+	
+	<!-- NAVBAR -->
+	<div id="navbar">
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<!-- <a href="#" class="nav-link">Categories</a> -->
+			<form action="#">
+				<!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			
+			<div class="dropdown">
+				
+				<a href="#" class="notification dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+					 <span class="num" style="position: absolute; margin-right: 20px;" >5</span>
+					<i class='bx bxs-bell' ></i>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right"  style="background-color: var(--light);" aria-labelledby="notificationDropdown">
+				  <a class="dropdown-item" href="#">Something</a>
+				  <a class="dropdown-item" href="#">Something</a>
+				  <a class="dropdown-item" href="#">Something</a>
+				  <a class="dropdown-item" href="#">Something</a>
+				  <a class="dropdown-item" href="#">Something</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<a href="#" class="profile dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+				  <img src="img/people.png">
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+				  <a class="dropdown-item" href="#">Account Settings</a>
+				  <a class="dropdown-item logout" href="#" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- NAVBAR -->
+		
+
+	<!-- CONTENT STARTS-->
+	<section id="content">
+		<!-- MAIN STARTS-->
+		<main>
+			
+			
+		</main>
+		<!-- MAIN ENDS -->
+
+	</section>
+	<!-- CONTENT ENDS-->
+	
+	
+	<!-- apex charts and other charts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<!-- bootstrap JS CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<!-- Own CSS File -->
+	<script src="shared/scripts.js"></script>
+	<script src="analytics.js"></script>
+
+
+	
+</body>
+</html>
